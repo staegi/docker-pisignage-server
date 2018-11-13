@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  pisignage:
+      build: .
+      depends_on:
+        - mongo
+      ports:
+        - 3000:3000
+      restart: always
+      environment:
+        MONGO_URI: mongodb://mongo/pisignage-server
+        NODE_ENV: docker
+  mongo:
+      image: mongo:3.4
+      ports:
+        - 27017:27017
+      restart: always
+
