@@ -1,4 +1,4 @@
-FROM node:15.10.0-alpine
+FROM node:16.5.0-alpine
 
 RUN apk add --no-cache ffmpeg imagemagick git
 RUN mkdir -vp media/_thumbnails
